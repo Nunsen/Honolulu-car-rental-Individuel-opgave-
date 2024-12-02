@@ -1,0 +1,77 @@
+/* Centering the Available Cars heading */
+.available-cars-heading {
+    text-align: center; /* This centers the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+    font-size: 28px;
+    color: #333; /* You can adjust this color to match your design */
+    font-weight: bold;
+}
+
+/* Table Container */
+.table-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto; /* Center the table horizontally with margin from top */
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 15px; /* Soft rounded corners */
+    background-color: transparent; /* No background around the table */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;  /* Adjusts the space above the table */
+}
+
+
+/* Table Headers */
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Table Header Styling */
+th {
+    background-color: rgba(42, 42, 42, 0.8); /* Dark grey with slight transparency */
+    color: white;
+}
+
+/* Table Row Styling */
+td {
+    background-color: rgba(255, 255, 255, 0.6); /* Slight white background for rows */
+    color: #333;
+}
+
+/* Hover Effect for Table Rows */
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Slight grey on hover */
+}
+
+/* Select Button inside Table */
+.btn-select {
+    background-color: #f8a42b; /* Orange button */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button Hover Effect */
+.btn-select:hover {
+    background-color: #d98a2a; /* Darker orange when hovered */
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;  /* Add margin to move the text closer to the table */
+}
+

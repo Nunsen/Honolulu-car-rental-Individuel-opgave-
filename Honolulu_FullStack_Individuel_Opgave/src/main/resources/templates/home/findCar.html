@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/frontPageCSS.css">
+    <link rel="stylesheet" href="/css/findCarCSS.css">
+    <title>Available Cars</title>
+</head>
+<body>
+<!-- Navigation Bar -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="https://ae01.alicdn.com/kf/Sdd7a31fc37ff43db8e9fc9b8e5bd1e81y/Cartoon-Dreamy-Flowers-Car-Stickers-for-Rasta-Hibiscus-Decal-Flower-Window-Bumper-Sticker-Waterproof-Car-Styling.jpg" alt="Alamo Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Locations</a></li> <!-- <li> tag er list -->
+            <li><a href="#">Cars</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="search-booking">
+            <a href="#" class="book-now">Book Now</a>
+            <input type="text" placeholder="Search" class="search-input">
+        </div>
+    </nav>
+</header>
+
+<main>
+    <h2 class="available-cars-heading">Available Cars</h2> <!--titlen her er sat i sin egen klasse så det kan formatteres, det skal stå centreret. -->
+    <div class="table-container">
+        <table>
+            <thead>
+            <tr>
+                <th>Car ID</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Color</th>
+                <th>Daily Rate</th>
+                <th>Car Type</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <!--th:each="car : ${cars}": dette er Thymeleaf loop. Det fortæller Thymeleaf den skal iterere/traversere igennem listen af biler (${cars}) som er tilføjet til modellen af controlleren. -->
+            <!--Traverserer igennem hver bil i listen og generere en række i tabellen for hver og en.-->
+
+            <tr th:each="car : ${cars}">
+                <td th:text="${car.carId}"></td>
+                <td th:text="${car.make}"></td>
+                <td th:text="${car.model}"></td>
+                <td th:text="${car.year}"></td>
+                <td th:text="${car.color}"></td>
+                <td th:text="${car.dailyRate}"></td>
+                <td th:text="${car.carType}"></td>
+                <td>
+                    <form action="/home/booking" method="get">
+                        <!-- dette videregår fra forsiden til findCar, ved at ligge i URL'en. -->
+                        <input type="hidden" name="carId" th:value="${car.carId}">
+                        <input type="hidden" name="carType" th:value="${car.carType}">
+                        <input type="hidden" name="dailyRate" th:value="${car.dailyRate}">
+                        <button type="submit">SELECT</button>
+                    </form>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</main>
+
+</body>
+</html>

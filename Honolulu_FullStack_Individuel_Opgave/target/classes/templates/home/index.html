@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/frontPageCSS.css">
+    <title>Car Rental - Find Available Cars</title>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="https://ae01.alicdn.com/kf/Sdd7a31fc37ff43db8e9fc9b8e5bd1e81y/Cartoon-Dreamy-Flowers-Car-Stickers-for-Rasta-Hibiscus-Decal-Flower-Window-Bumper-Sticker-Waterproof-Car-Styling.jpg" alt="Alamo Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Cars</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="search-booking">
+            <a href="#" class="book-now">Book Now</a>
+            <input type="text" placeholder="Search" class="search-input">
+        </div>
+    </nav>
+</header>
+
+<!-- Main Booking Section -->
+<main>
+    <div class="booking-box">
+        <h2>Book Your Car</h2>
+        <form action="/home/findCar" method="get">
+            <div class="input-group">
+                <label for="start-date">From Date</label>
+                <input type="date" id="start-date" name="startDate" required> <!-- required da man skal vælge for at gå videre.-->
+            </div>
+            <div class="input-group">
+                <label for="end-date">To Date</label>
+                <input type="date" id="end-date" name="endDate" required>
+            </div>
+            <div class="input-group">
+                <!-- Drop down menu med carType -->
+                <label for="car-type">Car Type</label>
+                <select id="car-type" name="carType" required>
+                    <option value="" disabled selected>Select Car Type</option>
+                    <option value="luxury">Luxury</option>
+                    <option value="family">Family</option>
+                    <option value="sports">Sports</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <button type="submit" class="btn-book">FIND YOUR CAR</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<!-- Test Buttons -->
+<a href="/home/test">Test Knap</a>
+<a href="/home/cars">Test Knap</a>
+
+</body>
+</html>

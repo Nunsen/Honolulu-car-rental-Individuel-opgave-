@@ -1,0 +1,144 @@
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* BAGGRUNDSBILLEDE */
+body {
+    background-image: url('https://i.pinimg.com/736x/9f/f0/80/9ff080c0ac8551844eaf42c504a23d9a.jpg'); /* Example image URL */
+    background-size: cover; /* Cover the entire area below the navbar */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep the image fixed when scrolling */
+    margin-top: 70px; /* Ensure background starts below navbar */
+    font-family: 'Poppins', sans-serif; /* Apply modern font */
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed; /* Keeps navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensures navbar stays above content */
+    background-color: rgba(54, 64, 57, 0.79); /* Semi-transparent navbar */
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Distribute space between logo and nav items */
+    align-items: center; /* Vertically center the items */
+    padding: 20px 50px; /* Add padding for spacing */
+    font-size: 18px; /* Increase font size */
+}
+
+/* Logo Styling */
+.navbar .logo img {
+    height: 50px; /* Adjust logo size */
+}
+
+/* Navigation Links Styling */
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 30px; /* Space between items */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px; /* Adjust for larger size */
+    line-height: 50px; /* Vertically center the links */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f8a42b; /* Orange hover effect */
+}
+
+/* Search and Book section */
+/* Booking Box Styling */
+.booking-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin: 100px auto; /* Center the box with space from top */
+    font-family: 'Poppins', sans-serif; /* Apply modern font */
+}
+
+/* Booking Box Header */
+.booking-box h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Input Group Styling */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif; /* Apply modern font */
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #f8a42b; /* Orange border on focus */
+    outline: none;
+}
+
+/* Two Columns Layout for Age and Car Type */
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between the columns */
+}
+
+.column {
+    width: 48%; /* Each column takes almost half the width */
+}
+
+/* Submit Button Styling */
+.btn-book {
+    background-color: #f8a42b; /* Orange color */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif; /* Apply modern font */
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-book:hover {
+    background-color: #d98a2a; /* Darker orange on hover */
+}
